@@ -44,6 +44,10 @@ def main():
             if event.type == pg.QUIT: 
                 return
             
+        if kk_rct.colliderect(bd_rct):  # 練習５：ぶつかってたら
+            print("ゲームオーバー")
+            return
+            
         screen.blit(bg_img, [0, 0])
         """こうかとん"""
         key_lst = pg.key.get_pressed()
