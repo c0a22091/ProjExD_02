@@ -25,7 +25,9 @@ def main():
     kk_img_forward = pg.transform.flip(kk_img, True, False)
     kk_img_backward = pg.transform.flip(kk_img_forward, True, False)
 
-    
+    # こうかとんのSurfaceの二重dict
+    # dictの1つ目のキーが横向き・2つ目のキーが縦向きのスピード
+    # スピードが負のときキーは-1, 0のとき0, 正のとき1
     kk_img_list = {1: {
         1: pg.transform.rotozoom(kk_img_forward, -45, 1.0),
         0: pg.transform.rotozoom(kk_img_forward, 0, 1.0),
